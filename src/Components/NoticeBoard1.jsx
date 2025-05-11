@@ -41,12 +41,12 @@ const NoticeBoard1 = () => {
   return (
     <div className="notice-board">
       <div className="notice-header">
-        <h4 className="notice-title">सूचना फलक</h4>
+        <h4 className="notice-titlee">सूचना फलक</h4>
       </div>
 
       <div className="notices-container">
         <div className="notice-item fade-slide">
-          <h3 className="notice-item-title">{currentNotice.title}</h3>
+          <h4 className="notice-item-titlee">{currentNotice.title}</h4>
           <p className="notice-description">{currentNotice.description}</p>
         </div>
       </div>

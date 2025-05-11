@@ -1,0 +1,147 @@
+.staff-container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .staff-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .staff-header h2 {
+    color: #1a4a8a;
+    font-size: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .staff-header .icon {
+    color: #ffd700;
+  }
+  
+  .staff-header p {
+    color: #666;
+    font-size: 1.1rem;
+    margin: 0;
+  }
+  
+  .staff-section {
+    margin-bottom: 3rem;
+  }
+  
+  .staff-section h3 {
+    color: #1a4a8a;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #ffd700;
+  }
+  
+  .section-icon {
+    color: #1a4a8a;
+  }
+  
+  .staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  .staff-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .staff-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .staff-image-placeholder {
+    height: 200px;
+    background: linear-gradient(135deg, #1a4a8a 0%, #0d3a7a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+  }
+  
+  .staff-details {
+    padding: 1.5rem;
+  }
+  
+  .staff-details h4 {
+    color: #1a4a8a;
+    font-size: 1.3rem;
+    margin: 0 0 0.5rem;
+  }
+  
+  .staff-role {
+    color: #ff6b6b;
+    font-weight: 600;
+    margin: 0 0 1rem;
+  }
+  
+  .staff-qualification {
+    display: flex;
+    gap: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .staff-quote {
+    background: #f9f9f9;
+    padding: 1rem;
+    border-left: 4px solid #1a4a8a;
+    position: relative;
+  }
+  
+  .staff-quote p {
+    margin: 0;
+    color: #555;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  
+  .quote-icon {
+    color: #ffd700;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    opacity: 0.3;
+    font-size: 1.5rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .staff-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .staff-header h2 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .staff-card {
+      margin: 0 0.5rem;
+    }
+    
+    .staff-qualification {
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+  }

@@ -49,7 +49,8 @@ const Navbar = () => {
 
       {/* School logo/name */}
       <div className="navbar-logo-section">
-        <div className="navbar-container navbar-logo-container">
+              <div className="navbar-container navbar-logo-container">
+                  <img src='https://igsdm.co.in/wp-content/uploads/2021/03/IGSDM-LOGO.png' height={120} width={150}/>
           <h1>राष्ट्रमाता इंदिरा गांधी विद्यालय तथा विज्ञान कनिष्ठ महाविद्यालय</h1>
           <p>मुरमाडी/तुपकर, तालुका-लाखनी, जिल्हा-भंडारा</p>
         </div>
