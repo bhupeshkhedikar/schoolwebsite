@@ -1,0 +1,145 @@
+/* Base styles reused */
+.notice-board.single {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+  }
+  
+  /* Header */
+  .notice-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    height: 3.2rem;
+    color: #f9f9f9;
+    background-color: #1a4a8a;
+    padding: 1rem 1.2rem;
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+  }
+  .notices-container {
+    padding: 10px;
+    border: 3px solid black;
+  }
+  
+  .notice-icon-circle {
+    background-color: #ffd700;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+  }
+  
+  .notice-icon {
+    font-size: 1.2rem;
+    color: #1a4a8a;
+  }
+  
+  .notice-title-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    flex: 1;
+    min-width: 150px;
+  }
+  
+  
+  /* Ticker */
+  .ticker-wrapper {
+    overflow: hidden;
+    position: relative;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: #f9f9f9;
+  }
+  
+  .ticker-content {
+    animation: slide-left 1s ease;
+    white-space: normal;
+    max-width: 100%;
+  }
+  
+  .notice-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin: 0 0 6px 0;
+  }
+  
+  .notice-description {
+    margin: 0;
+    color: #333;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  /* Slide animation */
+  @keyframes slide-left {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .notice-header{
+        display: flex;
+    }
+    .ticker-wrapper {
+      height: auto;
+      padding: 1rem;
+    }
+  
+    .notice-title {
+      font-size: 1.3rem;
+    }
+  
+    .notice-description {
+        margin: 5px;
+      font-size: 0.85rem;
+    }
+  
+    .notice-header h2 {
+      font-size: 1.1rem;
+    }
+  }
+  @media (max-width: 480px) {
+    .notice-title-text {
+      font-size: 1.1rem;
+    }
+  
+    .notice-header {
+      gap: 10px;
+      padding: 0.8rem 1rem;
+    }
+  
+    .notice-icon-circle {
+      min-width: 36px;
+      min-height: 36px;
+      padding: 8px;
+    }
+  
+    .notice-icon {
+      font-size: 1rem;
+    }
+  }
+  
+  
