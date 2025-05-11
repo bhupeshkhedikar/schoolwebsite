@@ -1,0 +1,225 @@
+/* Base styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .navbar-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Header styles */
+  .navbar-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Top contact bar */
+  .navbar-topbar {
+    background-color: #1a4a8a;
+    color: white;
+    padding: 8px 0;
+    font-size: 14px;
+  }
+  
+  .navbar-contact-item {
+    margin-right: 20px;
+    display: flex;
+    font-size: 0.7rem;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  
+  .navbar-login-links {
+    display: none;
+  }
+  
+  .navbar-login-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+  
+  .navbar-login-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Logo section */
+  .navbar-logo-section {
+    background-color: white;
+    padding: 15px 0;
+  }
+  
+  .navbar-logo-container {
+    text-align: center;
+  }
+  
+  .navbar-logo-container h1 {
+    color: #1a4a8a;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .navbar-logo-container p {
+    color: #333;
+    font-size: 16px;
+  }
+  
+  /* Main navigation */
+  .navbar-main {
+    background-color: #1a4a8a;
+  }
+  
+  .navbar-mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+  }
+  
+  .navbar-mobile-title {
+    font-weight: 600;
+  }
+  
+  .navbar-mobile-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+  }
+  
+  .navbar-links-show {
+    display: flex;
+  }
+  
+  .navbar-item {
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .navbar-link-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-link {
+    color: white;
+    text-decoration: none;
+    padding: 12px 0;
+    display: block;
+    flex-grow: 1;
+  }
+  
+  .navbar-dropdown-button {
+    background: none;
+    border: none;
+    color: white;
+    padding: 12px 15px;
+    cursor: pointer;
+  }
+  
+  /* Dropdown menu */
+  .navbar-dropdown {
+    display: none;
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding-left: 15px;
+  }
+  
+  .navbar-dropdown-show {
+    display: block;
+  }
+  
+  .navbar-dropdown-link {
+    color: white;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+  }
+  
+  .navbar-dropdown-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Desktop styles */
+  @media (min-width: 768px) {
+    .navbar-topbar {
+      font-size: 12px;
+    }
+  
+    .navbar-login-links {
+      display: block;
+    }
+  
+    .navbar-logo-container h1 {
+      font-size: 28px;
+    }
+  
+    .navbar-mobile-header {
+      display: none;
+    }
+  
+    .navbar-links {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .navbar-item {
+      border-top: none;
+    }
+  
+    .navbar-link {
+      padding: 15px 20px;
+    }
+  
+    .navbar-link:hover {
+      background-color: #0d3a7a;
+    }
+  
+    .navbar-dropdown-button {
+      display: none;
+    }
+  
+    .navbar-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 200px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      padding-left: 0;
+      z-index: 10;
+    }
+  
+    .navbar-dropdown-link {
+      color: #333;
+      padding: 10px 20px;
+    }
+  
+    .navbar-dropdown-link:hover {
+      background-color: #f5f5f5;
+      text-decoration: none;
+    }
+  
+    /* Show dropdown on hover */
+    .navbar-item:hover .navbar-dropdown {
+      display: block;
+    }
+  }
