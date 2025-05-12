@@ -80,7 +80,7 @@ const Footer = () => {
 
       {/* Copyright */}
       <div className="footer-copyright">
-        <p>&copy; {new Date().getFullYear()} Mount Carmel Convent. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} राष्ट्रमाता इंदिरा गांधी विद्यालय तथा विज्ञान कनिष्ठ महाविद्यालय. All Rights Reserved.</p>
       </div>
     </footer>
   );

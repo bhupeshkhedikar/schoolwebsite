@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className="navbar-topbar">
         <div className="navbar-container">
           <div style={{display:'flex',justifyContent:'space-between'}}>
-            <span className="navbar-contact-item">Email: info@mountcarmel.edu</span>
+            <span className="navbar-contact-item">Email: info@school.edu</span>
             <span className="navbar-contact-item">Phone: +91 1234567890</span>
           </div>
         </div>
@@ -50,7 +50,7 @@ const Navbar = () => {
       {/* School logo/name */}
       <div className="navbar-logo-section">
               <div className="navbar-container navbar-logo-container">
-                  <img src='https://igsdm.co.in/wp-content/uploads/2021/03/IGSDM-LOGO.png' height={120} width={150}/>
+                  <img src='https://img.eselt.de/img/17787577_kVaIvJMZvLtSLoTC/ad.jpg' height={120} width={150}/>
           <h1>राष्ट्रमाता इंदिरा गांधी विद्यालय तथा विज्ञान कनिष्ठ महाविद्यालय</h1>
           <p>मुरमाडी/तुपकर, तालुका-लाखनी, जिल्हा-भंडारा</p>
         </div>

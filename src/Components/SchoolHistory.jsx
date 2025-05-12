@@ -7,7 +7,7 @@ const SchoolHistory = () => {
     {
       year: '1950',
       title: 'Foundation',
-      description: 'Mount Carmel Convent was established by the Sisters of Charity with just 35 students and 2 teachers.',
+      description: 'राष्ट्रमाता इंदिरा गांधी विद्यालय तथा विज्ञान कनिष्ठ महाविद्यालय was established by the Sisters of Charity with just 35 students and 2 teachers.',
       icon: <FaSchool />
     },
     {
@@ -39,7 +39,7 @@ const SchoolHistory = () => {
   return (
     <div className="history-container">
       <div className="history-header">
-        <h2><FaHistory className="history-icon" /> A Brief History of Mount Carmel Convent</h2>
+        <h2><FaHistory className="history-icon" /> A Brief History of राष्ट्रमाता इंदिरा गांधी विद्यालय तथा विज्ञान कनिष्ठ महाविद्यालय</h2>
         <p>Our journey of excellence in education since 1950</p>
       </div>
 
