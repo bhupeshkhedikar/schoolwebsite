@@ -41,8 +41,8 @@ const Navbar = () => {
       <div className="navbar-topbar">
         <div className="navbar-container">
           <div style={{display:'flex',justifyContent:'space-between'}}>
-            <span className="navbar-contact-item">Email: info@school.edu</span>
-            <span className="navbar-contact-item">Phone: +91 1234567890</span>
+            <span className="navbar-contact-item">Email: rashtramatagandhi@gmail.com</span>
+            <span className="navbar-contact-item">Phone: +91 9765925449</span>
           </div>
         </div>
       </div>
