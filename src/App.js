@@ -9,6 +9,7 @@ import EventsActivities from './Components/EventsActivities';
 import SchoolHistory from './Components/SchoolHistory';
 import Staff from './Components/Staff';
 import Footer from './Components/Footer';
+import StaffComponent from './Components/StaffComponent'
 
 function App() {
   return (
@@ -18,9 +19,10 @@ function App() {
        <NoticeBoard1/>
       <ImageSlider />
       <OurShiningStars />
-      <EventsActivities />
+    <StaffComponent/>
+      {/* <EventsActivities /> */}
       <SchoolHistory />
-      <Staff />
+      {/* <Staff /> */}
       <Footer/>
     </div>
   );

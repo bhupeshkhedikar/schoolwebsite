@@ -1,200 +1,188 @@
-.notice-board {
-    max-width: 900px;
-    margin: 2rem auto;
-    font-family: 'Poppins', sans-serif;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    overflow: hidden;
+.shining-stars-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: auto; /* Allows horizontal scrolling on small devices */
+}
+
+.stars-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.stars-header h2 {
+  color: #1a4a8a;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.star-icon {
+  color: #ffd700;
+  font-size: 1.8rem;
+}
+
+.stars-header p {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.toppers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding-bottom: 1rem; /* Space for scrollbar */
+}
+
+.topper-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  min-width: 280px; /* Minimum card width */
+}
+
+.topper-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.topper-image {
+  position: relative;
+  height: 180px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topper-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trophy-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.position-number {
+  position: absolute;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.trophy-1 {
+  background: rgba(255, 215, 0, 0.9);
+  color: #1a4a8a;
+}
+
+.trophy-2 {
+  background: rgba(192, 192, 192, 0.9);
+  color: #1a4a8a;
+}
+
+.trophy-3 {
+  background: rgba(205, 127, 50, 0.9);
+  color: white;
+}
+
+.topper-details {
+  padding: 1.2rem;
+  text-align: center;
+}
+
+.topper-details h3 {
+  color: #1a4a8a;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+}
+
+.topper-class {
+  color: #666;
+  font-size: 0.85rem;
+  margin: 0 0 0.5rem;
+}
+
+.topper-achievement {
+  color: #333;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0.4rem;
+  background: #f9f9f9;
+  border-radius: 5px;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 900px) {
+  .shining-stars-container {
+    padding: 0 0.5rem;
   }
   
-  .notice-header {
-    background-color: #1a4a8a;
-    padding: 1.2rem 2rem;
-    color: white;
-    text-align: center;
-  }
-  
-  .notice-header h2 {
-    margin: 0;
-    font-size: 1.8rem;
-    font-weight: 600;
-  }
-  
-  .notice-header p {
-    margin: 0.3rem 0 0;
-    font-size: 1.1rem;
-    opacity: 0.9;
-  }
-  
-  .notice-divider {
-    height: 3px;
-    background-color: #ffd700;
-    width: 80px;
-    margin: 1rem auto 0;
-  }
-  
-  .board-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
-  }
-  
-  .section-title {
-    color: #1a4a8a;
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  
-  .section-title .icon {
-    color: #ffd700;
-  }
-  
-  /* Stars Section */
-  .stars-section {
-    border-right: 1px dashed #ddd;
-    padding-right: 2rem;
-  }
-  
-  .toppers-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+  .toppers-grid {
+    grid-template-columns: repeat(3, 240px);
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
   }
   
   .topper-card {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background-color: #f9f9f9;
+    scroll-snap-align: start;
+    min-width: 240px;
+  }
+  
+  .topper-image {
+    height: 150px;
+  }
+  
+  .topper-details {
     padding: 1rem;
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+  }
+}
+
+@media (max-width: 600px) {
+  .toppers-grid {
+    grid-template-columns: repeat(2, 170px);
   }
   
-  .topper-card:hover {
-    transform: translateY(-3px);
+  .topper-card {
+    min-width: 170px;
   }
   
-  .trophy-icon {
-    position: relative;
-    font-size: 2rem;
-    color: #ffd700;
-    min-width: 50px;
-    text-align: center;
+  .topper-image {
+    height: 140px;
   }
   
-  .position-badge {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 0.8rem;
-    font-weight: bold;
-    color: #1a4a8a;
+  .trophy-badge {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
   }
   
-  .trophy-1 {
-    color: gold;
+  .topper-details h3 {
+    font-size: 1rem;
   }
   
-  .trophy-2 {
-    color: silver;
+  .topper-class, .topper-achievement {
+    font-size: 0.75rem;
   }
-  
-  .trophy-3 {
-    color: #cd7f32; /* bronze */
-  }
-  
-  .topper-info h4 {
-    margin: 0 0 0.3rem;
-    color: #1a4a8a;
-    font-size: 1.1rem;
-  }
-  
-  .topper-info p {
-    margin: 0;
-    color: #666;
-    font-size: 0.9rem;
-  }
-  
-  /* Notices Section */
-  .notices-section {
-    padding-left: 1rem;
-  }
-  
-  .notice-item {
-    margin-bottom: 2rem;
-  }
-  
-  .notice-title {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-  }
-  
-  .notice-text {
-    background-color: #f9f9f9;
-    border-left: 4px solid #1a4a8a;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-  }
-  
-  .notice-text p {
-    margin: 0;
-    color: #333;
-  }
-  
-  .notice-date {
-    text-align: right;
-    font-size: 0.9rem;
-    color: #666;
-    font-style: italic;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .board-content {
-      grid-template-columns: 1fr;
-      padding: 1.5rem;
-    }
-    
-    .stars-section {
-      border-right: none;
-      border-bottom: 1px dashed #ddd;
-      padding-right: 0;
-      padding-bottom: 2rem;
-      margin-bottom: 2rem;
-    }
-    
-    .notice-header h2 {
-      font-size: 1.5rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .notice-board {
-      margin: 1rem;
-    }
-    
-    .notice-header {
-      padding: 1rem;
-    }
-    
-    .board-content {
-      padding: 1rem;
-    }
-    
-    .topper-card {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
+}

@@ -1,0 +1,191 @@
+.staff-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .staff-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .staff-header h2 {
+    color: #1a4a8a;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .staff-header .icon {
+    color: #ffd700;
+  }
+  
+  .staff-header p {
+    color: #666;
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  /* Leadership Section */
+  .leadership-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .leadership-section h3 {
+    color: #1a4a8a;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .section-icon {
+    color: #1a4a8a;
+  }
+  
+  .leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .leader-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .leader-photo-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #ffd700;
+    margin-bottom: 1rem;
+  }
+  
+  .leader-photo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .leader-details h4 {
+    color: #1a4a8a;
+    font-size: 1.1rem;
+    margin: 0 0 0.3rem;
+  }
+  
+  .leader-role {
+    color: #ff6b6b;
+    font-weight: 600;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Teaching Staff Section */
+  .teaching-staff-section h3 {
+    color: #1a4a8a;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .teaching-staff-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  
+  .teacher-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .teacher-photo-circle {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #1a4a8a;
+    margin-bottom: 0.8rem;
+  }
+  
+  .teacher-photo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .teacher-details h5 {
+    color: #1a4a8a;
+    font-size: 1rem;
+    margin: 0 0 0.2rem;
+  }
+  
+  .teacher-details p {
+    color: #666;
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  
+  /* Responsive Adjustments */
+  @media (min-width: 480px) {
+    .staff-header h2 {
+      font-size: 2.2rem;
+    }
+  
+    .leadership-section h3,
+    .teaching-staff-section h3 {
+      font-size: 1.5rem;
+    }
+  
+    .leadership-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+  
+    .leader-photo-circle {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .teaching-staff-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+  
+    .teacher-photo-circle {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
+  /* @media (max-width: 480px) {
+    .leadership-grid,
+    .teaching-staff-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .leader-photo-circle {
+      width: 140px;
+      height: 140px;
+    }
+  
+    .teacher-photo-circle {
+      width: 80px;
+      height: 80px;
+    }
+  } */
