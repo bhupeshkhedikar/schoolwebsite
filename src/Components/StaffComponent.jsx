@@ -13,7 +13,7 @@ const StaffComponent = () => {
     },
     {
       id: 2,
-      name: "श्री हरिदास किसन भुरे",
+      name: "श्री. हरिदास किसन भुरे",
       role: "मुख्याध्यापक",
       photo: "https://i.ibb.co/n8MdBbSV/Whats-App-Image-2025-05-12-at-22-49-18-a28ac0d4.jpg"
     }

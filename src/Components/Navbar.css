@@ -62,16 +62,16 @@
     text-align: center;
   }
   
-  .navbar-logo-container h1 {
+  .navbar-logo-container h4 {
     color: #1a4a8a;
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 12px;
+    font-weight: bold;
     margin-bottom: 5px;
   }
   
   .navbar-logo-container p {
     color: #333;
-    font-size: 16px;
+    font-size: 12px;
   }
   
   /* Main navigation */

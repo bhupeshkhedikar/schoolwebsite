@@ -14,9 +14,9 @@ const Footer = () => {
   ];
 
   const contactInfo = [
-    { icon: <FaPhone />, text: "+91 1234567890" },
-    { icon: <FaEnvelope />, text: "info@mountcarmel.edu" },
-    { icon: <FaMapMarkerAlt />, text: "123 School Road, City, State - 123456" }
+    { icon: <FaPhone />, text: "+91 9765925449" },
+    { icon: <FaEnvelope />, text: "rashtramatagandhi@gmail.com" },
+    { icon: <FaMapMarkerAlt />, text:" मुरमाडी/तुपकर, तालुका-लाखनी, जिल्हा-भंडारा" }
   ];
 
   const socialMedia = [
@@ -33,23 +33,11 @@ const Footer = () => {
         <div className="footer-section">
           <div className="footer-logo">
             <MdSchool className="school-icon" />
-            <h3>Mount Carmel Convent</h3>
+            <h5>राष्ट्रमाता इंदिरा गांधी विद्यालय तथा विज्ञान कनिष्ठ महाविद्यालय</h5>
           </div>
           <p className="footer-description">
             Providing quality education since 1950. We nurture young minds with values, discipline, and knowledge.
           </p>
-        </div>
-
-        {/* Quick Links */}
-        <div className="footer-section">
-          <h4>Quick Links</h4>
-          <ul className="footer-links">
-            {quickLinks.map((item, index) => (
-              <li key={index}>
-                <a href={item.link}>{item.name}</a>
-              </li>
-            ))}
-          </ul>
         </div>
 
         {/* Contact Info */}

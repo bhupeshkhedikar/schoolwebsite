@@ -10,6 +10,9 @@ import SchoolHistory from './Components/SchoolHistory';
 import Staff from './Components/Staff';
 import Footer from './Components/Footer';
 import StaffComponent from './Components/StaffComponent'
+import NoticeManagement from './Components/Admin/NoticeManagement'
+import SliderManagement from './Components/Admin/SliderManagement';
+import ShiningStarsAdmin from './Components/Admin/ShiningStarsAdmin';
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
       <SchoolHistory />
       {/* <Staff /> */}
       <Footer/>
+      <NoticeManagement />
+      <SliderManagement />
+      <ShiningStarsAdmin/>
     </div>
   );
 }

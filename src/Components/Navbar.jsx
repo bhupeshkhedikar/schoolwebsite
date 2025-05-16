@@ -50,8 +50,8 @@ const Navbar = () => {
       {/* School logo/name */}
       <div className="navbar-logo-section">
               <div className="navbar-container navbar-logo-container">
-                  <img src='https://img.eselt.de/img/17787577_kVaIvJMZvLtSLoTC/ad.jpg' height={120} width={150}/>
-          <h1>राष्ट्रमाता इंदिरा गांधी विद्यालय तथा विज्ञान कनिष्ठ महाविद्यालय</h1>
+                  <img src='https://img.eselt.de/img/17787577_kVaIvJMZvLtSLoTC/ad.jpg' height={80} width={100}/>
+          <h4>राष्ट्रमाता इंदिरा गांधी विद्यालय तथा विज्ञान कनिष्ठ महाविद्यालय</h4>
           <p>मुरमाडी/तुपकर, तालुका-लाखनी, जिल्हा-भंडारा</p>
         </div>
       </div>

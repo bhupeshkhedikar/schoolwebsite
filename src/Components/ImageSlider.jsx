@@ -1,26 +1,23 @@
 import { useState, useEffect } from 'react';
+import { collection, onSnapshot } from 'firebase/firestore';
+import { db } from '../firebase';
 import './ImageSlider.css';
 
 const ImageSlider = () => {
-  const slides = [
-    {
-      image: "https://i.ibb.co/RG9KdwX2/Whats-App-Image-2025-05-11-at-17-18-48-9fc66263.jpg",
-      title: 'Our Campus',
-      description: 'State-of-the-art facilities for holistic learning'
-    },
-    {
-      image: 'https://i.ibb.co/qM7Ds05g/Whats-App-Image-2025-05-11-at-17-18-46-95739738.jpg',
-      title: 'Interactive Learning',
-      description: 'Modern classrooms with smart teaching aids'
-    },
-    {
-      image: 'https://i.ibb.co/nq4LgTH7/Whats-App-Image-2025-05-11-at-17-18-45-3a7901f9.jpg',
-      title: 'Sports Facilities',
-      description: 'Excellent infrastructure for physical development'
-    }
-  ];
-
+  const [slides, setSlides] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Fetch slides in real-time
+  useEffect(() => {
+    const unsubscribe = onSnapshot(collection(db, 'slides'), (snapshot) => {
+      const slidesList = snapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      setSlides(slidesList);
+    });
+    return () => unsubscribe();
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => 
@@ -35,18 +32,24 @@ const ImageSlider = () => {
   };
 
   useEffect(() => {
+    if (slides.length === 0) return;
+    
     const interval = setInterval(() => {
       nextSlide();
     }, 5000);
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [slides, currentIndex]);
+
+  if (slides.length === 0) {
+    return <div className="slider-container">No slides available</div>;
+  }
 
   return (
     <div className="slider-container">
       <div className="slider">
         {slides.map((slide, index) => (
           <div 
-            key={index}
+            key={slide.id}
             className={`slide ${index === currentIndex ? 'active' : ''}`}
           >
             <div className="image-container">
