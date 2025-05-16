@@ -1,30 +1,6 @@
-.notice-board {
-    font-family: 'Poppins', sans-serif;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  }
-  
-  .notice-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 1rem;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .notice-header h2 {
-    color: #1a4a8a;
-    font-size: 1.8rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
+
+
+
   
   .notice-header h2 .icon {
     color: #f39c12;

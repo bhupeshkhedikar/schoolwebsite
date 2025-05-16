@@ -37,7 +37,7 @@ const NoticeBoard1 = () => {
     return (
       <div className="notice-board">
         <div className="notice-header">
-          <h4 className="notice-titlee">सूचना फलक</h4>
+          <h4 style={{textAlign:'center !important'}}>सूचना फलक</h4>
         </div>
         <p>No notices available</p>
       </div>
@@ -49,7 +49,7 @@ const NoticeBoard1 = () => {
   return (
     <div className="notice-board">
       <div className="notice-header">
-        <h4 className="notice-titlee">सूचना फलक</h4>
+           <h4 style={{textAlign:'center !important'}}>सूचना फलक</h4>
       </div>
 
       <div className="notices-container">
