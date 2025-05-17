@@ -14,7 +14,7 @@ const ArogyaAniKalyan = () => {
         'शाळेतील योग शिबिरांमध्ये नियमित सहभागी व्हा',
         'मुद्रा सुधारण्यासाठी ताठर बसणे आणि उभे राहणे शिका'
       ],
-      video: 'https://www.youtube.com/watch?v=gv-PsU4SP8k&pp=ygUseW9nYSBtYXJhdGhpIHZpZGVvcyBmb3IgaGlnaCBzY2hvb2wgc3R1ZGVudHM%3D'
+      video: 'https://www.youtube.com/embed/QEZ9ovde20Q?si=W905TxdbhdpfXo79'
     },
     nutrition: {
       title: 'पोषण आहार',
