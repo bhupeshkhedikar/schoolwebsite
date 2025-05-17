@@ -88,7 +88,7 @@ const StaffComponent = () => {
       </div>
 
         {/* Teaching Staff Section */}
-      <div className="teaching-staff-section">
+      <div className="teaching-staff-section" style={{marginTop:'35px'}}>
         <h3><FaChalkboardTeacher className="section-icon" />शैक्षणिक विविध समिती </h3>
         <div className="teaching-staff-grid">
           {otherMembers.length > 0 ? (
