@@ -85,6 +85,8 @@ text-align: center;
     text-align: center;
     font-size: 0.9rem;
     line-height: 1.4;
+    height: 150px;
+    overflow-x: scroll;
   }
   
   /* Slide animation */

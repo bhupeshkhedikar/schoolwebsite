@@ -15,7 +15,7 @@ const OurShiningStars = () => {
         ...doc.data()
       }));
       // Sort by position and take top 3
-      setToppers(toppersList.sort((a, b) => a.position - b.position).slice(0, 3));
+      setToppers(toppersList.sort((a, b) => a.position - b.position));
     });
     return () => unsubscribe();
   }, []);
