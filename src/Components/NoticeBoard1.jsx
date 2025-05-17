@@ -52,7 +52,7 @@ const NoticeBoard1 = () => {
            <h4 style={{textAlign:'center !important'}}>सूचना फलक</h4>
       </div>
 
-      <div className="notices-container">
+      <div className="notices-container" style={{marginTop:'-26px'}}>
         <div className="notice-item fade-slide">
           <h4 className="notice-item-titlee">{currentNotice.title}</h4>
           <p className="notice-description">{currentNotice.description}</p>
