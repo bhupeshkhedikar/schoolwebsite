@@ -7,6 +7,7 @@ import './StaffComponent.css';
 const StaffComponent = () => {
   const [leadership, setLeadership] = useState([]);
   const [teachingStaff, setTeachingStaff] = useState([]);
+  const [otherMembers, setOtherMembers]=useState([])
 
   // Fetch staff data in real-time
   useEffect(() => {
@@ -18,9 +19,14 @@ const StaffComponent = () => {
       setTeachingStaff(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
     });
 
+      const unsubscribeOtherStaff = onSnapshot(collection(db, 'otherStaff'), (snapshot) => {
+    setOtherMembers(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+    });
+
     return () => {
       unsubscribeLeadership();
       unsubscribeTeaching();
+       unsubscribeOtherStaff()
     };
   }, []);
 
@@ -77,6 +83,31 @@ const StaffComponent = () => {
             ))
           ) : (
             <p>No teaching staff information available</p>
+          )}
+        </div>
+      </div>
+
+        {/* Teaching Staff Section */}
+      <div className="teaching-staff-section">
+        <h3><FaChalkboardTeacher className="section-icon" />शैक्षणिक विविध समिती </h3>
+        <div className="teaching-staff-grid">
+          {otherMembers.length > 0 ? (
+            otherMembers.map((teacher) => (
+              <div key={teacher.id} className="teacher-card">
+                <div className="teacher-photo-circlee">
+                  <img 
+                    src={teacher.photo || 'https://cdn-icons-png.flaticon.com/512/266/266033.png'} 
+                    alt={teacher.name} 
+                  />
+                </div>
+                <div className="teacher-details">
+                  <h5>{teacher.name}</h5>
+                  <p>{teacher.role}</p>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p>No शैक्षणिक विविध समिती information available</p>
           )}
         </div>
       </div>

@@ -14,7 +14,8 @@ const StaffAdmin = () => {
   const [uploading, setUploading] = useState(false);
   
   const [leadership, setLeadership] = useState([]);
-  const [teachingStaff, setTeachingStaff] = useState([]);
+    const [teachingStaff, setTeachingStaff] = useState([]);
+    const [otherStaff,setotherStaff]=useState([])
 
   // Fetch staff data in real-time
   useEffect(() => {
@@ -25,10 +26,15 @@ const StaffAdmin = () => {
     const unsubscribeTeaching = onSnapshot(collection(db, 'teachingStaff'), (snapshot) => {
       setTeachingStaff(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
     });
+      
+          const unsubscribeOtherStaff = onSnapshot(collection(db, 'otherStaff'), (snapshot) => {
+            setotherStaff(snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })));
+          });
 
     return () => {
       unsubscribeLeadership();
-      unsubscribeTeaching();
+        unsubscribeTeaching();
+        unsubscribeOtherStaff()
     };
   }, []);
 
@@ -38,7 +44,7 @@ const StaffAdmin = () => {
 
     setUploading(true);
     try {
-      let photoUrl = 'https://i.ibb.co/60RdtKr4/Whats-App-Image-2025-05-12-at-19-03-01-6e0099be.jpg';
+      let photoUrl = 'https://e7.pngegg.com/pngimages/84/165/png-clipart-united-states-avatar-organization-information-user-avatar-service-computer-wallpaper.png';
       
       // Upload photo if provided
       if (photo) {
@@ -111,6 +117,12 @@ const StaffAdmin = () => {
           onClick={() => setStaffType('teachingStaff')}
         >
           <FaChalkboardTeacher /> Teaching Staff
+              </button>
+                      <button
+          className={staffType === 'otherStaff' ? 'active' : ''}
+          onClick={() => setStaffType('otherStaff')}
+        >
+          <FaChalkboardTeacher />  Add शैक्षणिक विविध समिती
         </button>
       </div>
 
@@ -213,6 +225,43 @@ const StaffAdmin = () => {
                         </button>
                         <button 
                           onClick={() => handleDelete(teacher.id, 'teachingStaff', teacher.photo)}
+                          className="delete-btn"
+                        >
+                          <FaTrash /> Delete
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+              )}
+              
+                {/* Teaching Staff List */}
+        {staffType === 'otherStaff' && (
+          <div className="staff-section">
+            <h3>
+              <FaChalkboardTeacher className="section-icon" /> शैक्षणिक विविध समिती ({otherStaff.length})
+            </h3>
+            {otherStaff.length === 0 ? (
+              <p>No शैक्षणिक विविध समिती added yet</p>
+            ) : (
+              <div className="staff-grid">
+                {otherStaff.map(teacher => (
+                  <div key={teacher.id} className="staff-card">
+                    <div className="staff-photo">
+                      <img src={teacher.photo} alt={teacher.name} />
+                    </div>
+                    <div className="staff-details">
+                      <h4>{teacher.name}</h4>
+                      <p>{teacher.role}</p>
+                      <div className="staff-actions">
+                        <button onClick={() => handleEdit(teacher)}>
+                          <FaEdit /> Edit
+                        </button>
+                        <button 
+                          onClick={() => handleDelete(teacher.id, 'otherStaff', teacher.photo)}
                           className="delete-btn"
                         >
                           <FaTrash /> Delete
