@@ -160,9 +160,9 @@ const SliderManagement = () => {
         </button>
       </form>
 
-      <div className="slides-list">
+      <div className="slides-list" style={{ height: '400px', overflow:'scroll'}}>
         <h3>Current Slides ({slides.length})</h3>
-        <div className="slides-grid">
+              <div className="slides-grid" >
           {slides.map(slide => (
             <div key={slide.id} className="slide-item">
               <img src={slide.image} alt={slide.title} />

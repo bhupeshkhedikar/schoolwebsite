@@ -57,7 +57,7 @@ const NoticeManagement = () => {
 
   return (
     <div className="admin-panel">
-      <h4 style={{textAlign:'center',margin:'10px'}}>Notice Board Admin</h4>
+      <h4 style={{textAlign:'center',margin:'10px'}}>Notice Board Mnagement</h4>
       
       <form onSubmit={handleSubmit} className="notice-form">
         <input
@@ -81,7 +81,7 @@ const NoticeManagement = () => {
       <div className="notices-list">
         <h3>Current Notices</h3>
         {notices.map(notice => (
-          <div key={notice.id} className="notice-item">
+          <div key={notice.id} className="notice-item" style={ {height:'200px',overflow:'scroll'}}>
             <h4>{notice.title}</h4>
             <p>{notice.description}</p>
             <div className="notice-actions">
