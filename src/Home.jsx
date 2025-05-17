@@ -7,6 +7,7 @@ import StaffComponent from "./Components/StaffComponent";
 import SchoolHistory from "./Components/SchoolHistory";
 import ImportantDaysMarathi from "./Components/ImportantDaysMarathi";
 import ArogyaAniKalyan from "./Components/ArogyaAniKalyan";
+import ShikshanikComics from "./Components/ShikshanikComics";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <ImageSlider />
       <OurShiningStars />
           <ImportantDaysMarathi />
+          <ShikshanikComics/>
           <ArogyaAniKalyan/>
       <StaffComponent />
       <SchoolHistory />
