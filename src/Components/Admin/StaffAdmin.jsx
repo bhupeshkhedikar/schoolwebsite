@@ -93,9 +93,9 @@ const StaffAdmin = () => {
   return (
     <div className="staff-admin-container">
       <div className="admin-header">
-        <h2>
+        <h4>
           <FaChalkboardTeacher className="icon" /> Staff Management
-        </h2>
+        </h4>
         <p>Add, edit or remove staff members</p>
       </div>
 

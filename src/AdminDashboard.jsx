@@ -7,8 +7,8 @@ import StaffAdmin from './Components/Admin/StaffAdmin';
 
 const AdminDashboard = () => {
   return (
-    <div style={{ padding: "2rem" }}>
-      <h2>Admin Dashboard</h2>
+    <div style={{ padding: "2rem" ,textAlign:'center'}}>
+      <h2 style={{textAlign:'center',margin:'10px'}}>Admin Dashboard</h2>
       <NoticeManagement />
       <SliderManagement />
       <ShiningStarsAdmin />

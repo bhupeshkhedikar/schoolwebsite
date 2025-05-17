@@ -57,7 +57,7 @@ const NoticeManagement = () => {
 
   return (
     <div className="admin-panel">
-      <h2>Notice Board Admin</h2>
+      <h4 style={{textAlign:'center',margin:'10px'}}>Notice Board Admin</h4>
       
       <form onSubmit={handleSubmit} className="notice-form">
         <input

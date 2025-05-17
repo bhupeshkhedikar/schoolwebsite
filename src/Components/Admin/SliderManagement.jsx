@@ -97,7 +97,7 @@ const SliderManagement = () => {
 
   return (
     <div className="admin-panel">
-      <h2>Slider Image Management</h2>
+      <h4 style={{textAlign:'center',margin:'10px'}}>Slider Image Management</h4>
       
       <div className="upload-mode-toggle">
         <button

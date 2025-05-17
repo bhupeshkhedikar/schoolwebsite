@@ -104,9 +104,9 @@ const ShiningStarsAdmin = () => {
   return (
     <div className="admin-container">
       <div className="admin-header">
-        <h2>
+        <h4>
           <FaStar className="icon" /> Manage Shining Stars <FaStar className="icon" />
-        </h2>
+        </h4>
         <p>Add, edit or remove top performing students</p>
       </div>
 
